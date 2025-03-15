@@ -124,21 +124,3 @@ h2, h4{
     }
 }
 
-/* PANTALLAS MUY PEQUEÑAS */
-@media (max-width: 479px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .lista_descriptiva img {
-        width: 100%;
-        max-width: 120px;
-        height: auto;
-    }
-
-    body {
-        padding: 5px;
-    }
-}
