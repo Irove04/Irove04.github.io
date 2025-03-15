@@ -1,0 +1,144 @@
+nav ul{
+    list-style: circle;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: medium;
+}
+
+body{
+    background-color: #7a604e;
+    font-family: "Times New Roman", serif;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #f39c12;
+}
+
+footer{
+    background-color: #91520c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+header{
+    background-color: #60422e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.lista_descriptiva img{
+    width: 180px;
+    height: 220px;
+}
+
+.lista_descriptiva dd{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+.lista_descriptiva dt ,dl{
+    color: white;
+    margin: 0px;
+    padding: 10px;
+}
+h2, h4{
+    color: white;
+    text-align: center;
+}
+
+
+/* PC */
+@media (min-width: 1024px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .lista_descriptiva img {
+        width: 350px;
+        height: auto;
+    }
+
+    body {
+        padding: 40px;
+    }
+}
+
+/* MÓVILES */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .lista_descriptiva img {
+        width: 90%;
+        max-width: 150px;
+        height: auto;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
+
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 1023px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .lista_descriptiva img {
+        width: 250px;
+        height: auto;
+    }
+
+    body {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 1em;
+    }
+}
+
+/* PANTALLAS MUY PEQUEÑAS */
+@media (max-width: 479px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .lista_descriptiva img {
+        width: 100%;
+        max-width: 120px;
+        height: auto;
+    }
+
+    body {
+        padding: 5px;
+    }
+}
