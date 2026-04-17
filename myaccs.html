@@ -3,15 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis cuentas</title>
+    <title>my accs // CV</title>
+
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cv.css">
     <script src="/js/app.js"></script>
     <script src="js/calendar.js" defer></script>
     <script src="js/sounds.js" defer></script>
     <script src="js/music.js" defer></script>
     <script src="js/background.js" defer></script>
+
 </head>
-<body>
+<body class="scroll-fix">
+
+<div class="music-player">
+    <span class="tech-text" id="track-name">CARGANDO YT...</span>
+    <div class="player-controls">
+        <button onclick="prevTrack()" class="player-btn">«</button>
+        <button onclick="togglePlay()" id="play-btn" class="player-btn">▶</button>
+        <button onclick="nextTrack()" class="player-btn">»</button>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+    <div id="yt-player" style="display: none;"></div>
+</div>
+
+<div class="os-panel">
+
+    <header class="header">
+        <div>
+            <a href="index.html" class="back-btn">« RETURN TO MENU</a>
+            <h1 class="os-title">MARÍA CRISTINA</h1>
+        </div>
+        <div class="tech-text" style="text-align: right;">
+            DAW_STUDENT // FULLSTACK_DEV<br>
+            STATUS: ACTIVE
+        </div>
+    </header>
+
+    <div class="cv-grid">
+
+        <div class="cv-sidebar">
+
+            <div class="avatar-box" style="height: 280px; margin-top: 0;">
+                    <img src="https://i.imgur.com/eTK9Nz2.png" alt="Avatar CV" class="avatar-image">
+            </div>
+            <div class="menu-section" style="padding-top: 0;">
+                <div class="sn-code">ID: WEB-DEV-04</div>
+                <h2 class="menu-title" style="font-size: 1.5rem;">ABOUT ME »</h2>
+                <p style="color: var(--text-main); line-height: 1.6; font-size: 0.95rem;">
+                    Desarrolladora Web en formación con experiencia práctica en entornos Fullstack. Me considero una persona resolutiva, con capacidad de adaptación y pasión por aprender nuevas tecnologías.
+                </p>
+
+                <h2 class="menu-title" style="font-size: 1.5rem; margin-top: 20px;">CONTACT »</h2>
+                <a href="mailto:tuemail@ejemplo.com" class="menu-btn" style="font-size: 1.1rem; padding: 12px 20px;">[ EMAIL ]</a>
+                <a href="https://github.com/Irove04" class="menu-btn" target="_blank" style="font-size: 1.1rem; padding: 12px 20px;">[ GITHUB ]</a>
+                <div class="tech-text" style="margin-top: 10px; font-size: 1rem; text-align: center;">CASTELLÓN, SPAIN</div>
+            </div>
+
+        </div>
+
+        <div class="cv-main">
+
+            <section>
+                <h2 class="section-title">EXPERIENCE //</h2>
+                <div class="log-list">
+
+                    <div class="log-item" style="display: block; cursor: default; transform: none; box-shadow: 4px 4px 0px var(--hard-shadow);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed var(--grid-line); padding-bottom: 8px;">
+                            <span class="log-item-title" style="font-size: 1.2rem; color: var(--text-highlight);">M-HUNTER</span>
+                            <span class="log-item-date">2025 - 2026</span>
+                        </div>
+                        <div class="sn-code" style="margin-top: 12px; font-size: 0.9rem;">Prácticas DAW // Fullstack Dev</div>
+                        <p class="cv-job-desc">
+                            Desarrollo web utilizando el framework <strong>Symfony</strong> y PHP. Maquetación avanzada con Bootstrap y Tailwind CSS para interfaces modernas y eficientes.
+                        </p>
+                    </div>
+
+                    <div class="log-item" style="display: block; cursor: default; transform: none; box-shadow: 4px 4px 0px var(--hard-shadow);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed var(--grid-line); padding-bottom: 8px;">
+                            <span class="log-item-title" style="font-size: 1.2rem; color: var(--text-highlight);">Universitat Jaume I</span>
+                            <span class="log-item-date">2022</span>
+                        </div>
+                        <div class="sn-code" style="margin-top: 12px; font-size: 0.9rem;">Prácticas SMR // Técnica de Sistemas</div>
+                        <p class="cv-job-desc">
+                            Mantenimiento preventivo y correctivo de equipos informáticos en el Laboratorio de Economía Experimental 2. Soporte técnico a sistemas y resolución de incidencias.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">EDUCATION //</h2>
+                <div class="log-list">
+                    <div class="log-item" style="display: block; cursor: default; transform: none;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="log-item-title" style="font-size: 1.1rem;">Desarrollo de Aplicaciones Web (DAW)</span>
+                            <span class="log-item-date">Presente</span>
+                        </div>
+                        <p class="cv-job-desc" style="margin-top: 5px; margin-bottom: 0; color: var(--text-highlight);">IES El Caminás, Castellón</p>
+                    </div>
+
+                    <div class="log-item" style="display: block; cursor: default; transform: none;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="log-item-title" style="font-size: 1.1rem;">Sistemas Microinformáticos y Redes (SMR)</span>
+                            <span class="log-item-date">2022</span>
+                        </div>
+                        <p class="cv-job-desc" style="margin-top: 5px; margin-bottom: 0; color: var(--text-highlight);">IES El Caminás, Castellón</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">TECH_SKILLS //</h2>
+                <div class="skills-container">
+                    <span class="tech-text">PHP / SYMFONY</span>
+                    <span class="tech-text">JAVASCRIPT (ES6)</span>
+                    <span class="tech-text">HTML5 & CSS3</span>
+                    <span class="tech-text">TAILWIND / BOOTSTRAP</span>
+                    <span class="tech-text">MYSQL / DATABASE</span>
+                    <span class="tech-text">GIT / GITHUB</span>
+                    <span class="tech-text">SISTEMAS & REDES</span>
+                    <span class="tech-text">BLENDER 3D</span>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">LANGUAGES //</h2>
+                <div class="skills-container">
+                    <span class="tech-text">SPANISH (NATIVO)</span>
+                    <span class="tech-text">VALENCIAN (B1)</span>
+                    <span class="tech-text">ENGLISH (AVANZADO)</span>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>

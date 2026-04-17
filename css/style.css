@@ -41,6 +41,15 @@ button,
     cursor: url('https://cdn.cursors-4u.net/previews/wii-pointer-1-c279a940-32.webp') 43 33, auto !important;
 }
 
+body.scroll-fix {
+    overflow-y: auto !important;
+    display: block !important;
+    height: auto !important;
+}
+body.scroll-fix .os-panel {
+    margin: 40px auto !important;
+}
+
 /* CAPA DE LOS CUBOS */
 .bg-cubes-layer {
     position: fixed;
