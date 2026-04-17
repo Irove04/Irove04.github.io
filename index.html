@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indice</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js"></script>
+    <script src="js/calendar.js" defer></script>
+    <script src="js/sounds.js" defer></script>
+    <script src="js/music.js" defer></script>
+    <script src="js/background.js" defer></script>
+</head>
+<body>
+
+<div class="music-player">
+    <span class="tech-text" id="track-name">CARGANDO YT...</span>
+    <div class="player-controls">
+        <button onclick="prevTrack()" class="player-btn">«</button>
+        <button onclick="togglePlay()" id="play-btn" class="player-btn">▶</button>
+        <button onclick="nextTrack()" class="player-btn">»</button>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <div id="yt-player" style="display: none;"></div>
+</div>
+
+<div class="os-panel">
+
+    <header class="header">
+        <div>
+            <span class="tech-text">[ connection v.3 | 2000 / 01 / 20 ]</span>
+            <h1 class="os-title">MY TAMA : EVEIRO</h1>
+        </div>
+        <div class="tech-text" style="text-align: right;">
+            VIRTUAL PET NETWORK<br>
+            GEN-ID-9602A
+        </div>
+    </header>
+
+    <div class="grid-layout">
+
+        <div class="avatar-box">
+            <img src="assets/images/nequ1.webp" alt="Avatar del usuario" class="avatar-image">
+        </div>
+
+        <div class="menu-section">
+            <div class="sn-code">SN: 00237ZAPL</div>
+            <h2 class="menu-title">Select* »</h2>
+
+            <a href="index.html" class="menu-btn">MY COLECTION</a>
+            <a href="blog.html" class="menu-btn">BLOG</a>
+            <a href="https://github.com/Irove04" class="menu-btn">MY GITHUB PROFILE</a>
+            <a href="kitties.html" class="menu-btn">KITTIES</a>
+            <a href="myaccs.html" class="menu-btn">CONTACT</a>
+        </div>
+
+        <div class="showcase">
+            <div class="moon-bg"></div>
+
+            <div class="y2k-calendar-widget">
+                <div class="calendar-header">
+                    <div class="calendar-clock" id="clockDisplay">00:00:00</div>
+                    <div class="calendar-month" id="monthDisplay">MONTH 202X</div>
+                </div>
+                <div class="calendar-days">
+                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                </div>
+                <div class="calendar-dates" id="datesDisplay">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

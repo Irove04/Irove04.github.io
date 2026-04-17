@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My cats</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/wii-gallery.css">
+
+    <script src="/js/app.js"></script>
+    <script src="/js/calendar.js" defer></script>
+    <script src="/js/sounds.js" defer></script>
+    <script src="/js/music.js" defer></script>
+    <script src="/js/background.js" defer></script>
+</head>
+<body>
+
+<div class="music-player">
+    <span class="tech-text" id="track-name">CARGANDO YT...</span>
+    <div class="player-controls">
+        <button onclick="prevTrack()" class="player-btn">«</button>
+        <button onclick="togglePlay()" id="play-btn" class="player-btn">▶</button>
+        <button onclick="nextTrack()" class="player-btn">»</button>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+    <div id="yt-player" style="display: none;"></div>
+</div>
+
+<div id="global-loader" class="aero-loader-wrapper hidden">
+    <div class="aero-spinner"></div>
+    <div class="aero-loader-text">LOADING...</div>
+</div>
+
+<div class="os-panel wii-theme">
+
+    <header class="header">
+        <div>
+            <a href="index.html" class="back-btn wii-style">« Menú Principal</a>
+            <h1 class="os-title wii-title">Kitties Channel</h1>
+        </div>
+        <div class="tech-text wii-info">
+            Wii Menu System<br>
+            MEM: 512 BLOCKS
+        </div>
+    </header>
+
+    <ul class="wii-channels-grid">
+        <li class="wii-channel active">
+            <a href="#luna-1">
+                <img src="https://i.imgur.com/E6yFItZ.jpg" alt="Luna">
+                <div class="channel-title">Luna</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#patitas-1">
+                <img src="https://i.imgur.com/Css8O7a.jpg" alt="Patitas">
+                <div class="channel-title">Patitas</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#luna-2">
+                <img src="https://i.imgur.com/le3qrf9.jpg" alt="Luna">
+                <div class="channel-title">Luna</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#patitas-2">
+                <img src="https://i.imgur.com/78yTJi3.jpg" alt="Patitas">
+                <div class="channel-title">Patitas</div>
+            </a>
+        </li>
+
+        <li class="wii-channel active">
+            <a href="#luna-3">
+                <img src="https://i.imgur.com/SGhymTH.jpg" alt="Luna">
+                <div class="channel-title">Luna</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#patitas-3">
+                <img src="https://i.imgur.com/M9V0olQ.jpg" alt="Patitas">
+                <div class="channel-title">Patitas</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#luna-4">
+                <img src="https://i.imgur.com/D6lKOM7.jpg" alt="Luna">
+                <div class="channel-title">Luna</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#patitas-4">
+                <img src="https://i.imgur.com/EHoaVDl.jpg" alt="Patitas">
+                <div class="channel-title">Patitas</div>
+            </a>
+        </li>
+
+        <li class="wii-channel active">
+            <a href="#luna-5">
+                <img src="https://i.imgur.com/7hXn0BR.jpg" alt="Luna">
+                <div class="channel-title">Luna</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#patitas-5">
+                <img src="https://i.imgur.com/zb8VAMG.jpg" alt="Patitas">
+                <div class="channel-title">Patitas</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#luna-6">
+                <img src="https://i.imgur.com/6fWHztZ.jpg" alt="Luna">
+                <div class="channel-title">Luna</div>
+            </a>
+        </li>
+        <li class="wii-channel active">
+            <a href="#luna-7">
+                <img src="https://i.imgur.com/rPSKg4S.jpg" alt="Luna">
+                <div class="channel-title">Luna</div>
+            </a>
+        </li>
+    </ul>
+
+    <div id="luna-1" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">LUNA</h2>
+                <img src="https://i.imgur.com/E6yFItZ.jpg" class="wii-large-img" alt="Luna">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="luna-2" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">LUNA</h2>
+                <img src="https://i.imgur.com/le3qrf9.jpg" class="wii-large-img" alt="Luna">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="luna-3" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">LUNA</h2>
+                <img src="https://i.imgur.com/SGhymTH.jpg" class="wii-large-img" alt="Luna">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="luna-4" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">LUNA</h2>
+                <img src="https://i.imgur.com/D6lKOM7.jpg" class="wii-large-img" alt="Luna">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="luna-5" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">LUNA</h2>
+                <img src="https://i.imgur.com/7hXn0BR.jpg" class="wii-large-img" alt="Luna">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="luna-6" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">LUNA</h2>
+                <img src="https://i.imgur.com/6fWHztZ.jpg" class="wii-large-img" alt="Luna">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="luna-7" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">LUNA</h2>
+                <img src="https://i.imgur.com/rPSKg4S.jpg" class="wii-large-img" alt="Luna">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="patitas-1" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">PATITAS</h2>
+                <img src="https://i.imgur.com/Css8O7a.jpg" class="wii-large-img" alt="Patitas">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="patitas-2" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">PATITAS</h2>
+                <img src="https://i.imgur.com/78yTJi3.jpg" class="wii-large-img" alt="Patitas">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="patitas-3" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">PATITAS</h2>
+                <img src="https://i.imgur.com/M9V0olQ.jpg" class="wii-large-img" alt="Patitas">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="patitas-4" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">PATITAS</h2>
+                <img src="https://i.imgur.com/EHoaVDl.jpg" class="wii-large-img" alt="Patitas">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="patitas-5" class="wii-modal-overlay">
+        <a href="#" style="position: absolute; width: 100%; height: 100%;"></a>
+        <div class="wii-modal-window">
+            <div class="wii-tab-blue"></div>
+            <div class="wii-modal-content">
+                <h2 class="wii-cat-name">PATITAS</h2>
+                <img src="https://i.imgur.com/zb8VAMG.jpg" class="wii-large-img" alt="Patitas">
+            </div>
+            <div class="wii-modal-footer">
+                <a href="#" class="wii-pill-btn"><span class="btn-reflect"></span><span class="btn-text">Volver</span></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="wii-footer-clone">
+        <div class="wii-footer-bg"></div>
+        <div class="wii-footer-content">
+            <a href="index.html" class="wii-round-btn home">
+                <span class="btn-reflect"></span>
+                <span class="btn-icon">Wii</span>
+            </a>
+            <div class="wii-footer-text">Kitties Channel Menu</div>
+            <a href="myaccs.html" class="wii-round-btn msg">
+                <span class="btn-reflect"></span>
+                <span class="btn-icon">✉</span>
+            </a>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
