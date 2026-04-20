@@ -78,16 +78,6 @@ async function loadPage(url, push = true) {
                     currentPanel.classList.remove('wii-theme');
                 }
 
-                //myaccs
-                if (url.includes('myaccs.html')) {
-                    if (!document.querySelector('link[href*="cv.css"]')) {
-                        const link = document.createElement('link');
-                        link.rel = 'stylesheet';
-                        link.href = 'css/cv.css'; // Mejor sin la barra / inicial
-                        document.head.appendChild(link);
-                    }
-                }
-
                 if (document.querySelector('.y2k-calendar-widget')) {
                     if (typeof initCalendarWidgets === "function") {
                         initCalendarWidgets();

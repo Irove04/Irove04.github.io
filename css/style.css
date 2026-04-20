@@ -622,3 +622,76 @@ body.scroll-fix .os-panel {
             display: none !important;
         }
     }
+
+
+/* CV */
+
+body.scroll-fix {
+    overflow-y: auto !important;
+    display: block !important;
+    height: auto !important;
+}
+body.scroll-fix .os-panel {
+    margin: 40px auto !important;
+}
+.cv-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+.cv-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cv-sidebar .avatar-box {
+    width: 100%;
+    max-width: 250px;
+    height: auto !important;
+    margin: 0 auto 20px auto;
+    display: block;
+    overflow: hidden;
+    padding: 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.cv-sidebar .avatar-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+.cv-main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+.cv-job-desc {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+/* queries */
+@media (max-width: 900px) {
+    .cv-grid {
+        grid-template-columns: 1fr;
+    }
+    .cv-sidebar .avatar-box {
+        height: 350px;
+    }
+    body.scroll-fix .os-panel {
+        margin: 20px auto !important;
+    }
+}
