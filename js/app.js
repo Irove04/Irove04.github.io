@@ -53,6 +53,9 @@ async function loadPage(url, push = true) {
         const parser = new DOMParser();
         const newDoc = parser.parseFromString(html, 'text/html');
 
+        document.body.className = newDoc.body.className;
+        document.title = newDoc.title;
+
         const newPanel = newDoc.querySelector('.os-panel');
         const currentPanel = document.querySelector('.os-panel');
 
@@ -62,6 +65,7 @@ async function loadPage(url, push = true) {
             setTimeout(() => {
                 currentPanel.innerHTML = newPanel.innerHTML;
 
+                //kitties
                 if (url.includes('kitties.html')) {
                     currentPanel.classList.add('wii-theme');
                     if (!document.querySelector('link[href*="wii-gallery.css"]')) {
@@ -72,6 +76,16 @@ async function loadPage(url, push = true) {
                     }
                 } else {
                     currentPanel.classList.remove('wii-theme');
+                }
+
+                //myaccs
+                if (url.includes('myaccs.html')) {
+                    if (!document.querySelector('link[href*="cv.css"]')) {
+                        const link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.href = 'css/cv.css'; // Mejor sin la barra / inicial
+                        document.head.appendChild(link);
+                    }
                 }
 
                 if (document.querySelector('.y2k-calendar-widget')) {
@@ -110,6 +124,8 @@ async function loadPage(url, push = true) {
         window.location.href = url;
     }
 }
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     injectCyberBackground();
