@@ -19,13 +19,11 @@ document.addEventListener('click', (e) => {
     const link = e.target.closest('a');
 
     if (!link) return;
-
     const rawHref = link.getAttribute('href');
 
     if (rawHref && rawHref.startsWith('#')) {
         return;
     }
-
     if (link && link.href.includes(window.location.origin) && !link.target && !link.hasAttribute('download')) {
         e.preventDefault();
         loadPage(link.href);
@@ -36,7 +34,6 @@ window.addEventListener('popstate', () => {
     if (window.location.pathname === currentPath) {
         return;
     }
-
     currentPath = window.location.pathname;
     loadPage(window.location.href, false);
 });
@@ -84,12 +81,6 @@ async function loadPage(url, push = true) {
                     }
                 }
 
-                if (document.querySelector('.music-player-widget')) {
-                    if (typeof initMusicPlayer === "function") {
-                        initMusicPlayer();
-                    }
-                }
-
                 currentPanel.style.opacity = '1';
                 currentPanel.classList.add('os-panel-transition');
 
@@ -104,7 +95,6 @@ async function loadPage(url, push = true) {
                 }, 600);
 
                 if (loader) loader.classList.add('hidden');
-
             }, 300);
         } else {
             window.location.href = url;
@@ -114,8 +104,6 @@ async function loadPage(url, push = true) {
         window.location.href = url;
     }
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     injectCyberBackground();
