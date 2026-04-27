@@ -2,7 +2,7 @@
 
 :root {
     --bg-base: #eaf0f8;
-    --grid-line: #cbd5e1;
+    --grid-line: #afeff1;
     --panel-bg: rgba(255, 255, 255, 0.35);
     --panel-border: #ffffff;
     --text-main: #475569;
@@ -124,8 +124,7 @@ body.scroll-fix .os-panel {
 /* PANEL PRINCIPAL */
 .os-panel {
     background: var(--panel-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(2px);
     transform: translateZ(0);
     width: 1100px;
     max-width: 95%;
@@ -669,7 +668,7 @@ body.scroll-fix .os-panel {
         word-break: break-word;
     }
     .os-title {
-        font-size: 0.5rem;
+        font-size: 1.5rem;
         overflow-wrap: break-word;
         word-break: break-word;
     }
