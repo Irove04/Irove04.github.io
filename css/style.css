@@ -27,7 +27,6 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    perspective: 1200px;
 }
 
 /* CURSOR */
@@ -664,11 +663,18 @@ body.scroll-fix .os-panel {
     body {
         padding: 20px 10px 20px 10px !important;
     }
+    .tech-text{
+        font-size: 1rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
     .os-title {
-        font-size: 1.8rem;
+        font-size: 0.5rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
     .gallery-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 fotos por fila en movil */
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
     .gallery-card img {
